@@ -18,17 +18,17 @@ This repository contains the pre-built **Sidecar Auth** binary and configuration
 ## Configuration (auth-config.yaml)
 
 The sidecar looks for a file named auth-config.yaml in its execution directory.YAMLport: "8080"                 # Port the sidecar listens on
-targetUrl: "http://app:9090" # Your actual application address
-authMode: "STATELESS"        # Options: STATELESS, HYBRID
-encryptionType: "RSA"        # Options: RSA, HMAC, EDDSA
+* targetUrl: "http://app:9090" # Your actual application address
+* authMode: "STATELESS"        # Options: STATELESS, HYBRID
+* encryptionType: "RSA"        # Options: RSA, HMAC, EDDSA
 
 # Algorithm Specifics
-publicKeyPath: "secrets/public.pem"
-privateKeyPath: "secrets/private.pem"
-jwt:
-  issuer: "sidecar-auth"
-  expiryMinutes: 15
-  secret: "your-hmac-secret-here"
+* publicKeyPath: "secrets/public.pem"
+* privateKeyPath: "secrets/private.pem"
+* jwt:
+  * issuer: "sidecar-auth"
+  * expiryMinutes: 15
+  * secret: "your-hmac-secret-here"
 
 # Path Mapping
 endpoints:
