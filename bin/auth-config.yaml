@@ -1,0 +1,16 @@
+port: "8080"
+targetUrl: "http://localhost:9090"
+authMode: "HYBRID"
+encryptionType: "EDDSA"
+publicKeyPath: "secrets/eddsa_public.pem"
+privateKeyPath: "secrets/eddsa_private.pem"
+jwt:
+  issuer: "my-sidecar"
+  token_expiry_duration: 15
+  secret: "<SECRET_HERE>"
+  expiryMinutes: 1
+endpoints:
+  login: "/api/login"
+  signup: "/api/signup"
+  refresh: "/api/verify-refresh"
+  authorize: "/api/authorize"
